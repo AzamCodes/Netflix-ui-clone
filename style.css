@@ -1,0 +1,609 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Gilroy;
+}
+#main {
+  background-color: #000000;
+  width: 100%;
+  /* padding: 1.6rem; */
+  position: relative;
+  padding-bottom: 1rem;
+}
+.logo img {
+  padding-top: 0.6rem;
+  height: 3rem;
+  padding-left: 2rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  z-index: 100000;
+  backdrop-filter: blur(23px);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 4rem;
+  top: 0;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.3rem;
+}
+.user-search {
+  position: relative;
+}
+.user-search i {
+  position: absolute;
+  top: 10px;
+  right: 64px;
+  color: rgba(229, 9, 20, 0.8);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.search input {
+  padding: 12px 90px 12px 10px;
+  width: 100%;
+  font-size: 1.1rem;
+  overflow-x: hidden;
+  font-weight: 400;
+  background-color: rgba(17, 17, 17, 0.7);
+  color: rgba(255, 255, 255, 0.7);
+  outline: none;
+  border: 1px solid rgba(229, 9, 20, 0.65);
+  border-radius: 8px;
+}
+.filter {
+  text-decoration: none;
+  background-color: rgba(229, 9, 20, 0.8);
+  color: #fff;
+  position: absolute;
+  right: 8px;
+  padding: 2px 7px;
+  top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+.user-icon {
+  background-color: royalblue;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-image: url(https://aniwatch.to/images/share-icon.gif);
+
+  background-position: center center;
+  background-size: cover;
+}
+
+.home {
+  padding: 0rem 0rem 2rem;
+}
+#circle {
+  height: 20px;
+  width: 20px;
+  background-color: rgba(229, 9, 20, 0.8);
+  mix-blend-mode: difference;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 199999999999;
+  transition: all linear 0.35s ease-in-out;
+}
+.swiper {
+  width: 100%;
+  background-color: #000000;
+  background-image: linear-gradient(to bottom left, #111213 76%, #000000 74%);
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+/* .swiper-slide::after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  background: linear-gradient(0.25turn, #000000, #1f201e, #050505);
+} */
+.content {
+  background-color: transparent;
+  position: absolute;
+  bottom: 14%;
+  text-align: left;
+  padding: 0rem 2rem 1rem;
+  left: 0;
+  color: #fff;
+}
+.content h2 {
+  letter-spacing: -0.1px;
+  font-size: 3rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  padding-left: 0rem;
+  color: rgba(229, 9, 20, 0.8);
+}
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.block i {
+  padding-left: 6px;
+}
+.date {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-right: 1.2rem;
+}
+.imdb {
+  background-color: #f6c800;
+  color: #000000;
+  padding: 2.5px 2px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding-right: 3px;
+}
+.content p {
+  padding: 10px 0px;
+  font-weight: 300;
+  font-size: 1.1rem;
+  width: 52%;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: start;
+  /* white-space: nowrap; */
+  line-height: 1.1;
+}
+.genre {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.genre h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-right: 1px solid #111;
+}
+.genre h4:first-child {
+  padding-left: 0;
+}
+.swiper-slide img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  background: linear-gradient(0deg, #000);
+}
+
+.f-d {
+  padding-top: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  justify-content: start;
+}
+
+.f-d a {
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 12px 10px;
+  background-color: rgba(229, 9, 20, 0.8);
+  color: #fff;
+
+  font-weight: 600;
+  text-decoration: none;
+}
+.f-d a:hover {
+  background-color: rgba(229, 9, 20, 0.65);
+}
+.add {
+  font-size: 2rem;
+  color: rgba(229, 9, 20, 0.8);
+  padding: 7px 7px;
+  transition: all 0.25s ease-in;
+  border: 2px solid rgba(229, 9, 20, 0.8);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.add:hover {
+  background-color: rgba(229, 9, 20, 0.8);
+  color: rgba(255, 255, 255, 1);
+  border: 2.2px solid transparent;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(229, 9, 20, 1);
+  padding-bottom: 1rem;
+  padding-left: 14px;
+}
+.trending .container h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgba(229, 9, 20, 1);
+  padding-bottom: 1rem;
+  padding-left: 4px;
+}
+.trending .container {
+  padding: 15px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+.trending .bx {
+  display: flex;
+  margin-right: 10px;
+}
+.bx img {
+  object-fit: cover;
+  margin-right: 12px;
+  max-height: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.bx img:hover {
+  transform: scale(1.09);
+}
+.action h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.bx > .smallPoster {
+  max-height: 170px;
+  transition: all linear 0.25s ease-in;
+}
+.smallPoster:last-child {
+  padding-right: 10px;
+}
+
+.bx > .smallPoster:hover {
+  transform: scale(0.94);
+}
+
+@media (max-width: 900px) {
+  .content h2 {
+    letter-spacing: -0.1px;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 0.8rem;
+    color: rgba(229, 9, 20, 0.8);
+  }
+  .f-d a {
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 9px 7px;
+    background-color: rgba(229, 9, 20, 0.8);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+  .content p {
+    padding: 10px 0px;
+    font-weight: 300;
+    font-size: 1rem;
+    width: 52%;
+
+    transition: 0.2s;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: start;
+    /* white-space: nowrap; */
+    line-height: 1.1;
+  }
+  .add {
+    font-size: 2rem;
+    color: rgba(229, 9, 20, 0.8);
+    transition: 0.2s;
+    padding: 2px 4px;
+    transition: all 0.25s ease-in;
+    border: 2px solid rgba(229, 9, 20, 0.8);
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 850px) {
+  .content {
+    bottom: 5%;
+  }
+}
+
+@media (max-width: 750px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 100000;
+    backdrop-filter: blur(23px);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    top: 0;
+  }
+  .search input {
+    padding: 8px 80px 8px 10px;
+    width: 100%;
+    font-size: 1rem;
+    overflow-x: hidden;
+    font-weight: 400;
+    background-color: rgba(17, 17, 17, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+    outline: none;
+    border: 1px solid rgba(229, 9, 20, 0.65);
+    border-radius: 8px;
+  }
+  .filter {
+    text-decoration: none;
+    background-color: rgba(229, 9, 20, 0.8);
+    color: #fff;
+    position: absolute;
+    right: 8px;
+    padding: 1px 4px;
+    top: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 4px;
+    border: 1px solid transparent;
+  }
+  .user-search i {
+    position: absolute;
+    top: 8px;
+    right: 53px;
+    color: rgba(229, 9, 20, 0.8);
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .user-icon {
+    background-color: royalblue;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-image: url(https://aniwatch.to/images/share-icon.gif);
+    background-position: center center;
+    background-size: cover;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .content p {
+    font-weight: 300;
+    font-size: 0.8rem;
+    width: 56%;
+    transition: 0.2s;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: start;
+    /* white-space: nowrap; */
+    line-height: 1;
+  }
+  .date {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+  }
+  .imdb {
+    background-color: #f6c800;
+    color: #000000;
+    padding: 2px 1px;
+    font-size: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    padding-right: 3px;
+  }
+  .block i {
+    padding-left: 5px;
+    font-size: 0.6rem;
+  }
+  .rating {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .logo img {
+    padding-top: 0.4rem;
+    height: 2rem;
+    padding-left: 1rem;
+  }
+  .content {
+    background-color: transparent;
+    position: absolute;
+    bottom: 14%;
+    text-align: left;
+    padding: 0rem 0.5rem 0rem;
+    left: 0;
+    color: #fff;
+  }
+  .date {
+    font-size: 0.4rem;
+  }
+  .content h2 {
+    padding-left: 0rem;
+    font-size: 1.4rem;
+  }
+  .f-d a {
+    font-size: 0.6rem;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 9px 7px;
+    background-color: rgba(229, 9, 20, 0.8);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+  h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: rgba(229, 9, 20, 1);
+    padding-bottom: 1rem;
+    padding-left: 14px;
+  }
+  h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: rgba(229, 9, 20, 1);
+    padding-bottom: 1rem;
+    padding-left: 14px;
+  }
+  .genre h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-right: 1px solid #111;
+  }
+  .add {
+    font-size: 1rem;
+    color: rgba(229, 9, 20, 0.8);
+    transition: 0.2s;
+    padding: 4px 4px;
+    transition: all 0.25s ease-in;
+    border: 2px solid rgba(229, 9, 20, 0.8);
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .f-d {
+    gap: 0.45rem;
+  }
+  .content h4 {
+    font-size: 0.6rem;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+  }
+  .content p {
+    font-weight: 300;
+    font-size: 0.55rem;
+    width: 58%;
+    transition: 0.2s;
+    color: rgba(255, 255, 255, 0.7);
+
+    line-height: 1;
+  }
+  .content {
+    padding: 0rem 0.5rem 0rem;
+    bottom: 3%;
+  }
+  .bx img {
+    max-height: 250px;
+  }
+  .f-d {
+    padding-top: 0.7rem;
+  }
+  .trending .container h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .logo img {
+    padding-top: 0.4rem;
+    height: 1.6rem;
+    padding-left: 1rem;
+  }
+  .user-search {
+    position: relative;
+    margin-left: 55px;
+  }
+  .f-d a {
+    font-size: 0.35rem;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 6px 3px;
+    background-color: rgba(229, 9, 20, 0.8);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+  .add {
+    font-size: 1rem;
+    color: rgba(229, 9, 20, 0.8);
+    transition: 0.2s;
+    padding: 2px 2px;
+    transition: all 0.25s ease-in;
+    border: 2px solid rgba(229, 9, 20, 0.8);
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .content h2 {
+    letter-spacing: -0.1px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 0.2rem;
+    color: rgba(229, 9, 20, 0.8);
+  }
+  .content p {
+    padding: 5px 0px;
+  }
+  .content h4 {
+    font-size: 0.3rem;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+  }
+  .rating {
+    font-size: 0.3rem;
+  }
+  .block i {
+    padding-left: 4px;
+    font-size: 0.3rem;
+  }
+  .f-d {
+    padding-top: 0.64rem;
+  }
+  .imdb {
+    background-color: #f6c800;
+    color: #000000;
+    padding: 1px 1px;
+    font-size: 0.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    padding-right: 3px;
+  }
+  .content p {
+    font-size: 0.45rem;
+  }
+  .content {
+    bottom: 5%;
+  }
+}
